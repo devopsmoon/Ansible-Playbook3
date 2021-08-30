@@ -1,0 +1,21 @@
+- name: Setup Apache httpd server
+  hosts: websrv
+  become: true
+  tasks:
+    - name: install httpd server
+      yum:
+        name: httpd
+        state: present
+
+    - name: starting the services
+      service:
+        name: httpd
+        state: started
+
+    - name: copying the index.html file to remote web server
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        mode: 0644
+        owner: root
+        group: root
