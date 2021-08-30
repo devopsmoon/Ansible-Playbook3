@@ -27,5 +27,5 @@
       mysql_user:
         name: admin
         password: admin123
-        priv: '*.*:ALL, GRANT'
+        priv: '*.*:ALL,GRANT'
         state: present
