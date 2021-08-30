@@ -37,9 +37,9 @@
 
 
     - debug:
-        var: db_out
+        var: db_out.db
 
     - debug:
-        var: dbuser_out
+        var: dbuser_out.user
 
 
