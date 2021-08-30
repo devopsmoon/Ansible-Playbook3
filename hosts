@@ -1,0 +1,18 @@
+web01   ansible_host=172.31.7.174
+web01   ansible_host=172.31.8.172
+db01    ansible_host=172.31.10.83
+
+[websrv]
+web01
+web02
+
+[dbsrv]
+db01
+
+[dc_ohio:children]
+websrv
+dbsrv
+
+[dc_ohio:vars]
+ansible_user=centos
+ansible_ssh_private_key_file=vprofile-key.pem
