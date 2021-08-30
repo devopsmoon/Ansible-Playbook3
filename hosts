@@ -1,5 +1,5 @@
 web01   ansible_host=172.31.7.174
-web01   ansible_host=172.31.8.172
+web02   ansible_host=172.31.8.172
 db01    ansible_host=172.31.10.83
 
 [websrv]
