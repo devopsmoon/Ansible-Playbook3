@@ -29,7 +29,7 @@
 
     - name: creating ghe mysql database user
       mysql_user:
-        name: "{{dbuseer}}"
+        name: "{{dbuser}}"
         password: "{{dbpass}}"
         priv: '*.*:ALL,GRANT'
         state: present
