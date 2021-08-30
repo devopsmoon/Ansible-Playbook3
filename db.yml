@@ -11,3 +11,15 @@
       service:
         name: mariadb
         state: started
+
+    - name: creating the mysql database accounts
+      mysql_db:
+        name: accounts
+        state: present
+
+    - name: creating ghe mysql database user
+      mysql_user:
+        name: admin
+        password: admin123
+        priv: '*.*:ALL, GRANT'
+        state: present
